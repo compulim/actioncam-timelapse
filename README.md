@@ -1,6 +1,8 @@
 # actioncam-timelapse
 
-This Node.js script will encode a JPEG sequence from Sony ActionCam into a HEVC (h.265) video with hardware acceleration by Intel QuickSync, at quality 25 and framerate of 30.
+This Node.js script will encode a JPEG sequence from Sony ActionCam into a HEVC (h.265) video with hardware acceleration by Intel QuickSync via DirectX 11, at quality 25 and framerate of 30.
+
+If you are not using Windows, you will need to modify this script.
 
 # How to use
 
@@ -11,4 +13,3 @@ This Node.js script will encode a JPEG sequence from Sony ActionCam into a HEVC 
 1. Run `node ./timelapse.mjs`
 
 The output will be named `output-*.mp4`.
-
