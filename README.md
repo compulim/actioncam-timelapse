@@ -11,7 +11,11 @@ If you are not using Windows, you will need to modify this script.
 1. Create a new folder
 1. Download `timelapse.mjs` to this folder
 1. Download ffmpeg and put it under this folder
-1. Copy `DCIM/100MSDCF/DSC*.jpg` files of the timelapse from SD card
+1. Copy `DCIM\100MSDCF\DSC*.jpg` files of the timelapse from the SD card
 1. Run `node ./timelapse.mjs`
 
 The output will be named `output-*.mp4`.
+
+# Technical
+
+This script will look for `*.jpg` or `*.jpeg` under the current working directory, sort them using filenames, then pipe them into FFMPEG via multipart JPEG.
