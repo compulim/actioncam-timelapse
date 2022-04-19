@@ -49,7 +49,7 @@ async function crawl(baseDir) {
       '25',
       '-r',
       '30',
-      `Outputs\\output-${Math.random().toString(36).substr(2, 5)}.mp4`
+      `output-${Math.random().toString(36).substr(2, 5)}.mp4`
     ],
     {
       stdio: ['pipe', 'inherit', 'inherit']
