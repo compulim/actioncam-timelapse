@@ -26,7 +26,7 @@ If you are not using Windows, you will need to modify this script.
 
 | Name | Default | Description |
 | - | - | - |
-| FRAME_RATE | 24 | Target frame rate |
+| FRAME_RATE | 23.976 | Target frame rate |
 | INPUT_DIR | (Current directory) | Input directory to recursive finding *.jpg |
 | OUTPUT_FILE | `Outputs/output-*.mp4` | Output file name
 | VIDEO_QUALITY | 25 | Video quality

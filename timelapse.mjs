@@ -6,10 +6,10 @@ import { spawn } from 'child_process';
 const platform = osPlatform();
 
 const {
-  FRAME_RATE = 24,
+  FRAME_RATE = 23.976 + '',
   INPUT_DIR = process.argv[2] || process.cwd(),
   OUTPUT_FILE = process.argv[3] || join('Outputs', `output-${Math.random().toString(36).substring(2, 7)}.mp4`),
-  VIDEO_QUALITY = 25
+  VIDEO_QUALITY = 25 + ''
 } = process.env;
 
 const FFMPEG_ARGS = [
@@ -34,9 +34,9 @@ const FFMPEG_ARGS = [
     '-c:v',
     platform === 'win32' ? 'hevc_qsv' : platform === 'arm64' ? 'hevc_v4l2m2m' : 'darwin' ? 'hevc_videotoolbox' : 'hevc',
     '-global_quality',
-    VIDEO_QUALITY + '',
+    VIDEO_QUALITY,
     '-r',
-    FRAME_RATE + '',
+    FRAME_RATE,
     OUTPUT_FILE
   ]
 ];
