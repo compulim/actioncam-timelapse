@@ -20,7 +20,7 @@ If you are not using Windows, you will need to modify this script.
 1. Download ffmpeg and put it under this folder
 1. Run `node ./timelapse.mjs D:\DCIM\100MSDCF Output.mp4`
 
-> If no arguments is passed, it will read `*.jpg` from current directory and output to `Outputs\output-*.mp4`.
+> If no arguments were passed, it will read `*.jpg` from current directory recursively, and output to `Outputs\output-*.mp4`.
 
 # Environment variables
 
