@@ -18,11 +18,19 @@ If you are not using Windows, you will need to modify this script.
 1. Create a new folder
 1. Download `timelapse.mjs` to this folder
 1. Download ffmpeg and put it under this folder
-1. Copy `DCIM\100MSDCF\DSC*.jpg` files of the timelapse from the SD card
-1. Run `node ./timelapse.mjs`
+1. Run `node ./timelapse.mjs D:\DCIM\100MSDCF Output.mp4`
 
-The output will be named `output-*.mp4`.
+> If no arguments is passed, it will read `*.jpg` from current directory and output to `Outputs\output-*.mp4`.
+
+# Environment variables
+
+| Name | Default | Description |
+| - | - | - |
+| FRAME_RATE | 24 | Target frame rate |
+| INPUT_DIR | (Current directory) | Input directory to recursive finding *.jpg |
+| OUTPUT_FILE | `Outputs/output-*.mp4` | Output file name
+| VIDEO_QUALITY | 25 | Video quality
 
 # Technical
 
-This script will look for `*.jpg` or `*.jpeg` under the current working directory, sort them using filenames, then pipe them into FFMPEG via multipart JPEG.
+This script will look for `*.jpg` or `*.jpeg` under the directory specified in the first argument, or under the current working directory. Then sort them using filenames, then pipe them into FFMPEG via multipart JPEG.
